@@ -53,6 +53,70 @@ deactivate
 
 
 
+## Evaluation
+
+The evaluation code provide here can be used to measure results on the publicly available validation set. It computes multiple metrics describe below.  We consider both localization constraint (IoU) and attributes prediction constraint (F1 score) when computing $AP$ and $AR​$. This is an extension of the [12 metrics](http://cocodataset.org/#detection-eval) of COCO detection evaluation.
+
+```bash
+Average Precision  (AP)
+    AP@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=all | maxDets=100]  # Primary metric
+    AP@[ IoU=0.50      | F1=0.50:0.95 |area=all | maxDets=100]
+    AP@[ IoU=0.75      | F1=0.50:0.95 |area=all | maxDets=100]
+    AP@[ IoU=0.50:0.95 | F1=0.50      |area=all | maxDets=100]
+    AP@[ IoU=0.50:0.95 | F1=0.75      |area=all | maxDets=100]
+    AP@[ IoU=0.50      | F1=0.50      |area=all | maxDets=100]
+    AP@[ IoU=0.50      | F1=0.75      |area=all | maxDets=100]
+    AP@[ IoU=0.75      | F1=0.50      |area=all | maxDets=100]
+    AP@[ IoU=0.75      | F1=0.75      |area=all | maxDets=100]
+    AP@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=  s | maxDets=100]
+    AP@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=  m | maxDets=100]
+    AP@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=  l | maxDets=100]
+
+Average Recall     (AR)
+    AR@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=all | maxDets=  1]
+    AR@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=all | maxDets= 10]
+    AR@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=all | maxDets=100]
+    AR@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=  s | maxDets=100]
+    AR@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=  m | maxDets=100]
+    AR@[ IoU=0.50:0.95 | F1=0.50:0.95 |area=  l | maxDets=100]
+```
+
+
+
+Additionally, we also provide metrics with only IoU constraint and only F1 thresholds constraint, for better understanding of the algorithm. See [evaluation demo](<https://github.com/KMnP/fashionpedia-api/blob/master/eval_demo.ipynb>)  for more details.
+
+
+
+## Result format
+
+The results format is similar to [COCO format for object detection](http://cocodataset.org/#format-results) with additional `attribute_ids` filed. See [evaluation demo](<https://github.com/KMnP/fashionpedia-api/blob/master/eval_demo.ipynb>) and also `loadRes()` in Fashionpedia API.
+
+Detection with bounding boxes and localized attributes prediction:
+
+```
+[{
+    "image_id": int, 
+    "category_id": int, 
+    "attribute_ids": [int],
+    "bbox": [x,y,width,height], 
+    "score": float,
+}]
+```
+
+Detection with segmentation masks and localized attributes prediction:
+
+```
+[{
+    "image_id": int, 
+    "category_id": int, 
+    "attribute_ids": [int],
+    "segmentation": RLE,
+    "score": float,
+}]
+```
+
+
+
 
 ## Citing Fashionpedia
 
