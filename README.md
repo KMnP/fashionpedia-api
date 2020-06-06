@@ -1,3 +1,5 @@
+[TOC]
+
 # Fashionpedia API
 
 Fashionpedia is a new dataset which consists of two parts:  (1) an ontology built by fashion experts containing 27 main apparel categories, 19 apparel parts, 294 fine-grained attributes and their relationships; (2) a dataset with everyday and celebrity event fashion images annotated with segmentation masks and their associated per-mask fine-grained attributes, built upon the Fashionpedia ontology. 
@@ -16,7 +18,7 @@ This Fashionpedia API enables reading, and visualizing annotations, and evaluati
 
 
 
-## More dataset examples
+## Annotation examples
 
 ![exp](images/examples.png)
 
@@ -32,6 +34,33 @@ This Fashionpedia API enables reading, and visualizing annotations, and evaluati
 
 ## Setup
 
+### via pip install
+
+```bash
+# create a new environment:
+python3 -m venv env               # Create a virtual environment
+source env/bin/activate           # Activate virtual environment
+
+# step 1: install COCO API:
+# Note: COCO API requires numpy to install. Ensure that you have numpy installed.
+# e.g. pip install numpy
+pip install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+
+# step 2: install Fashionpedia API via pip
+pip install fashionpedia
+
+
+# step 3: test. You can test that you have correctly installed the fashionpedia api
+#       by running the following command inside the repo.
+python test.py
+
+# do your work ...
+
+deactivate  # exit
+```
+
+### via git clone
+
 Clone the repo first and then do the following steps inside the repo:
 
 ```bash
@@ -39,16 +68,20 @@ Clone the repo first and then do the following steps inside the repo:
 python3 -m venv env               # Create a virtual environment
 source env/bin/activate           # Activate virtual environment
 
-# install COCO API. COCO API requires numpy to install. Ensure that you installed numpy.
+# step 1: install COCO API:
+# Note: COCO API requires numpy to install. Ensure that you have numpy installed.
+# e.g. pip install numpy
 pip install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-# install Fashionpedia API
+
+# step 2: install required packages
 pip install -r requirements.txt
 
-# test:
+# step 3: test. You can test that you have correctly installed the fashionpedia api
+#       by running the following command inside the repo.
 python test.py
+# do your work here...
 
-# exit
-deactivate
+deactivate  # exit
 ```
 
 
@@ -133,4 +166,4 @@ Detection with segmentation masks and localized attributes prediction:
 
 ## Credit
 
-Both fashionpedia and fashionpediaEval are sub-classes of COCO and COCOeval from PythonAPI for [COCO](https://github.com/cocodataset/cocoapi). 
+Both fashionpedia and fashionpediaEval are sub-classes of COCO and COCOeval from PythonAPI for [COCO](https://github.com/cocodataset/cocoapi).    [LVIS-API](<https://github.com/lvis-dataset/lvis-api>) was also referenced during the development.

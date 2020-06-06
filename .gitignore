@@ -4,6 +4,9 @@ _ext
 *.pyc
 *.so
 .m~
+dist/*
+build/*
+fashionpedia.egg-info/*
 
 # ipython/jupyter notebooks
 **/.ipynb_checkpoints/
