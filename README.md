@@ -16,19 +16,7 @@ This Fashionpedia API enables reading, and visualizing annotations, and evaluati
 
 
 
-## Annotation examples
-
-![exp](images/examples.png)
-
-<sub>Fashionpedia image examples with annotated segmentation masks (a-f) and fine-grained attributes (g-i).</sub>
-
-
-
-![more examples](images/more_examples.png)
-
-<sub>Example images and annotations from our dataset: the images are annotated with both instance segmentation masks and fine-grained attributes (black boxes)</sub>
-
-
+## [Annotation examples](<https://github.com/KMnP/fashionpedia-api/DATA_EXAMPLES.md>)
 
 ## Setup
 
@@ -145,6 +133,16 @@ Detection with segmentation masks and localized attributes prediction:
     "score": float,
 }]
 ```
+
+
+
+## Attribute-Mask R-CNN Predictor Demo
+
+For the task of instance segmentation with attribute localization, we present a strong baseline model named Attribute-Mask R-CNN that is built upon [Mask R-CNN](<https://arxiv.org/abs/1703.06870>) for Fashionpedia. Check out our [paper](<https://arxiv.org/abs/2004.12276>) for more details. 
+
+![baseline](images/baseline.png)
+
+Model (R-101-FPN):  [checkpoint](https://s3.amazonaws.com/ifashionist-dataset/attributes-maskrcnn/model.zip) , [predictior demo](https://github.com/KMnP/fashionpedia-api/blob/master/baseline_predictor_demo.ipynb)
 
 
 
