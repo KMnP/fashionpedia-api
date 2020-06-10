@@ -16,7 +16,7 @@ This Fashionpedia API enables reading, and visualizing annotations, and evaluati
 
 
 
-## [Annotation examples](<https://github.com/KMnP/fashionpedia-api/DATA_EXAMPLES.md>)
+## [See more examples](<https://github.com/KMnP/fashionpedia-api/blob/master/DATA_EXAMPLES.md>)
 
 ## Setup
 
@@ -74,7 +74,7 @@ deactivate  # exit
 
 ## Evaluation
 
-The evaluation code provide here can be used to measure results on the publicly available validation set. It computes multiple metrics describe below.  We consider both localization constraint (IoU) and attributes prediction constraint (F1 score) when computing $AP$ and $AR​$. This is an extension of the [12 metrics](http://cocodataset.org/#detection-eval) of COCO detection evaluation.
+The evaluation code provide here can be used to measure results on the publicly available validation set. It computes multiple metrics describe below.  We consider both localization constraint (IoU) and attributes prediction constraint (F1 score) when computing $AP$ and $AR$. This is an extension of the [12 metrics](http://cocodataset.org/#detection-eval) of COCO detection evaluation.
 
 ```bash
 Average Precision  (AP)
