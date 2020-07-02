@@ -144,6 +144,8 @@ For the task of instance segmentation with attribute localization, we present a 
 
 
 
+### Pretrained Models  
+
 | Pretrained Models                                            |
 | ------------------------------------------------------------ |
 | [R-101-FPN](https://s3.amazonaws.com/ifashionist-dataset/attributes-maskrcnn/r101-fpn.zip) |
@@ -154,12 +156,12 @@ For the task of instance segmentation with attribute localization, we present a 
 
 ## Citing Fashionpedia
 
-```
-@article{jia2020fashionpedia,
-    title={Fashionpedia: Ontology, Segmentation, and an Attribute Localization Dataset},
-    author={Jia, Menglin and Shi, Mengyun and Sirotenko, Mikhail and Cui, Yin and Cardie, Claire and Hariharan, Bharath and Adam, Hartwig and Belongie, Serge},
-    journal={arXiv preprint arXiv:2004.12276},
-    year={2020}
+```bash
+@inproceedings{jia2020fashionpedia,
+  title={Fashionpedia: Ontology, Segmentation, and an Attribute Localization Dataset},
+  author={Jia, Menglin and Shi, Mengyun and Sirotenko, Mikhail and Cui, Yin and Cardie, Claire and Hariharan, Bharath and Adam, Hartwig and Belongie, Serge}
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2020}
 }
 ```
 
