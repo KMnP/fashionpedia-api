@@ -711,7 +711,6 @@ class FPEval(COCOeval):
             "f1": f1,
             "iou": iou,
         }
-        results["AP"] = self._summarize('ap', catSuperIdx=catSuperIdx, **kwargs)
 
         if catSuperIdx is None and catIdx is None:
             for idx, super_cls in enumerate(self.FPParams.catSuperCls):
@@ -722,6 +721,7 @@ class FPEval(COCOeval):
 
         kwargs["catSuperIdx"] = catSuperIdx
         kwargs["catId"] = catIdx
+        results["AP"] = self._summarize('ap', **kwargs)
         if iou:
             results["AP_IOU50"] = self._summarize('ap', iouThr=.5, **kwargs)
             results["AP_IOU75"] = self._summarize('ap', iouThr=.75, **kwargs)
