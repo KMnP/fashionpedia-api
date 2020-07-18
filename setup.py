@@ -22,7 +22,7 @@ REQUIREMENTS = (reqs.strip().split("\n"),)
 if __name__ == "__main__":
     setuptools.setup(
         name=DISTNAME,
-        version="1.0",
+        version="1.1",
         author=AUTHOR,
         author_email="mj493@cornell.edu",
         description=DESCRIPTION,
