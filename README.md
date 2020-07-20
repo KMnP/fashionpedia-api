@@ -146,11 +146,7 @@ For the task of instance segmentation with attribute localization, we present a 
 
 ### Pretrained Models  
 
-| Pretrained Models                                            |
-| ------------------------------------------------------------ |
-| [R-101-FPN](https://s3.amazonaws.com/ifashionist-dataset/attributes-maskrcnn/r101-fpn.zip) |
-| more to come                                                 |
-
+The 1). *pretrained model ckpts* and 2). *training code* including data conversion, model training and inference [here](<https://github.com/tensorflow/tpu/tree/master/models/official/detection/projects/fashionpedia>).
 
 
 
