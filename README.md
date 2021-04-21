@@ -1,6 +1,8 @@
 # Fashionpedia API
 
-[Fashionpedia](https://fashionpedia.github.io/home/index.html) is a new dataset which consists of two parts:  (1) an ontology built by fashion experts containing 27 main apparel categories, 19 apparel parts, 294 fine-grained attributes and their relationships; (2) a dataset with 48k everyday and celebrity event fashion images annotated with segmentation masks and their associated per-mask fine-grained attributes, built upon the Fashionpedia ontology. 
+Fashionpedia is a new dataset which consists of two parts:  (1) an ontology built by fashion experts containing 27 main apparel categories, 19 apparel parts, 294 fine-grained attributes and their relationships; (2) a dataset with 48k everyday and celebrity event fashion images annotated with segmentation masks and their associated per-mask fine-grained attributes, built upon the Fashionpedia ontology.  
+
+Check out our project page [here](https://fashionpedia.github.io/home/index.html) and download the data at this [link](https://github.com/cvdfoundation/fashionpedia).
 
 
 
